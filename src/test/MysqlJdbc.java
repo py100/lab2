@@ -23,13 +23,7 @@ public class MysqlJdbc {
 
 			System.out.println("Success connect Mysql server!");
 			
-/*			
-			Statement initDB = connect.createStatement();
-			for (int i = 0; i < 10; i++) {
-//				System.out.println("insert into user values("+i+",'team"+i+"')");
-				initDB.execute("insert into user values("+i+",'team"+i+"')");
-			}*/
-			
+
 			Statement stmt = connect.createStatement();
 			ResultSet rs = stmt.executeQuery("select * from user");
 			// user 为你表的名称
